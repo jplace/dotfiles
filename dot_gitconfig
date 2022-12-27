@@ -1,0 +1,13 @@
+[user]
+    name = Jordan Place
+    email = tapman90@gmail.com
+[credential]
+[credential "https://git-codecommit.us-west-2.amazonaws.com"]
+    helper = !aws codecommit credential-helper $@
+    UseHttpPath = true
+[core]
+    autocrlf = input
+[credential]
+	helper = osxkeychain
+[merge]
+	conflictstyle = diff3

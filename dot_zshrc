@@ -1,0 +1,47 @@
+# jplace's Mac .zshrc
+# -------------------
+
+# This configuration assumed Oh My Zsh is installed
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/jplace/.oh-my-zsh"
+
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="pygmalion"
+
+plugins=(git)
+plugins+=(zsh-nvm)
+
+source $ZSH/oh-my-zsh.sh
+
+# Configure large history with no duplicates
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export HISTFILE=~/.zhistory
+setopt HIST_IGNORE_ALL_DUPS
+
+# Source aliases
+if [[ -f ~/.aliases ]]; then
+  source ~/.aliases
+fi
+
+# Make path bash compliant
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Edit PATH to work with MacPorts
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+
+# Edit PATH to work with non-sudo npm
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$NPM_PACKAGES/bin:$PATH"
+export MANPATH="$NPM_PACKAGES/share/man:$MANPATH"
+
+# Edit PATH to include Google Cloud Utils
+export PATH="${HOME}/google-cloud-sdk/bin:$PATH"
+
+# Setup NVM
+#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
