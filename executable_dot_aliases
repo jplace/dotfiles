@@ -16,6 +16,11 @@ alias export-zack='sudo zpool export zack'
 alias export-bayside='sudo zpool export bayside'
 alias export-calu='sudo zpool export calu'
 
+# Kill processes using my drives
+alias kill-zack='lsof -t /Volumes/zack/osx-safe-data | xargs kill'
+alias kill-bayside='lsof -t /Volumes/bayside/osx-safe-data | xargs kill'
+alias kill-calu='lsof -t /Volumes/calu/osx-safe-data | xargs kill'
+
 # Send an incremental ZFS backup
 # sudo zfs snapshot zack/osx-safe-data@<latest-zack>
 # zfs list -t snapshot
