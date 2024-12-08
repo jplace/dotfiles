@@ -34,4 +34,4 @@ alias fresh-tunes='rm -rf ~/.config/cmus ; cmus'
 
 # Download audio from YouTube
 # usage: get-song <url>
-alisa get-song='yt-dlp --extract-audio --audio-format mp3 --audio-quality 10'
+alias get-song='yt-dlp --extract-audio --audio-format mp3 --audio-quality 10'
