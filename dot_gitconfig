@@ -32,3 +32,5 @@
     prune = true
     pruneTags = true
     all = true
+[pager]
+    branch = false
