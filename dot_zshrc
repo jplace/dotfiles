@@ -10,7 +10,7 @@ export ZSH="/Users/jplace/.oh-my-zsh"
 ZSH_THEME="pygmalion"
 
 plugins=(git)
-plugins+=(zsh-nvm)
+plugins+=(nvm)
 
 source $ZSH/oh-my-zsh.sh
 
