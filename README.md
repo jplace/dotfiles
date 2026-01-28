@@ -21,6 +21,9 @@ chezmoi edit ~/.zshrc # edit a file in chezmoi
 chezmoi update -v # pull and apply latest changes from remote repository
 ```
 
+4. Customize certain computers.
+   * Change your _.gitconfig_ to use your work email address.
+
 ## Changing files
 
 Change files using chezmoi and then apply them to your machine and commit them in git.
